@@ -8,8 +8,7 @@
   },
   "require": {
     "php": ">=7.2",
-    "wikimedia/composer-merge-plugin": "^1.4",
-    "pimcore/pimcore": "~6.7.0"
+    "pimcore/pimcore": "~6.8.0"
   },
   "require-dev": {
     "cache/integration-tests": "^0.16.0",
@@ -49,17 +48,6 @@
     "symfony-var-dir": "var",
     "symfony-web-dir": "web",
     "symfony-tests-dir": "tests",
-    "symfony-assets-install": "relative",
-    "merge-plugin": {
-      "include": [
-        "composer.local.json"
-      ],
-      "recurse": true,
-      "replace": true,
-      "merge-dev": true,
-      "merge-extra": false,
-      "merge-extra-deep": false,
-      "merge-scripts": false
-    }
+    "symfony-assets-install": "relative"
   }
 }
