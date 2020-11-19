@@ -1,3 +1,1 @@
-# MeSelf
-
-Based on Pimcore Project
+# MYS
