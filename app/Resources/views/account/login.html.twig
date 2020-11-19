@@ -1,0 +1,36 @@
+{% extends 'layouts/layout.html.twig' %}
+
+{% block header %}
+    <a href="/">
+        <img id="logo" src="{{ asset('/static/images/logo.svg') }}" width="120" height="70" alt="logo" loading="lazy">
+    </a>
+{% endblock %}
+
+{% block main %}
+        <div class="my-5 d-flex justify-content-center">
+            <div class="col-12 col-md-6 text-center">
+
+                {% if errors %}
+                    {% for error in errors %}
+                        <div class="alert alert-danger" role="alert">
+                          {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+
+                <form method="post" action="/account/login">
+                    <h1 class="display-3 mb-3 font-weight-normal">Please Sign-In</h1>
+                    <input type="email" id="email" name="email" required="required" placeholder="Email" class="form-control" value="{{ (email) ?: '' }}">
+                    <input type="password" id="password" name="password" required="required" placeholder="Password" class="form-control mt-2">
+
+                    <div class="form-group">
+                        <button type="submit" id="submit" name="submit" class="btn-success btn-lg btn-block mt-4 btn">Login</button>
+                    </div>
+                </form>
+
+                <p>Forgot password?  <a href="#">Password Recovery</a></p>
+                <p>No Account? <a href="{{ path('account-register') }}">Register now!</a></p>
+
+            </div>
+        </div>
+{% endblock %}

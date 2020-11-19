@@ -1,0 +1,66 @@
+{% extends 'layouts/layout.html.twig' %}
+
+{% block body %}
+    <div class="container mt-5">
+        <div class="row">
+
+            <div class="col-3">
+                <div class="row">
+                    <a class="" href="/">
+                        <img id="logo" src="{{ asset('/static/images/logo.svg') }}" width="120" height="70" alt="logo" loading="lazy">
+                    </a>
+                </div>
+
+                {# Navigation left #}
+                <div class="row mt-5">
+                    <nav class="navbar-light">
+                        <ul class="navbar-nav flex-column">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Tools</a>
+                            </li>
+                            <li class="nav-item mb-3">
+                                <a class="nav-link" href="#">Meet Lisa</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Profile</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ path('account-logout') }}">Logout</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+
+            <div class="col-9 mt-5 pt-5">
+                <div class="card-deck">
+                    <a href="{{ path('member-diary') }}" class="card text-dark text-left btn">
+                        <img class="card-img-top" src="{{ asset('/static/images/tool_thumb_001@2x.png') }}" alt="Card image cap">
+                        <div class="card-body p-0 pt-3">
+                            <h5 class="card-title m-0">Diary</h5>
+                            <p class="card-text"><small class="text-muted">By MeetYourself</small></p>
+                            <p class="card-text">Document notes, experiences and dreams to learn about what affects your mood</p>
+                        </div>
+                    </a>
+                    <a href="#" class="card text-dark text-left btn">
+                        <img class="card-img-top" src="{{ asset('/static/images/tool_thumb_002@2x.png') }}" alt="Card image cap">
+                        <div class="card-body p-0 pt-3">
+                            <h5 class="card-title m-0">Discover your bad traits</h5>
+                            <p class="card-text"><small class="text-muted">By MeetYourself</small></p>
+                            <p class="card-text">It's easy to see the bad traits i others but have you ever thougt about what's your bad habits?</p>
+                        </div>
+                    </a>
+                    <a href="#" class="card text-dark text-left btn">
+                        <img class="card-img-top" src="{{ asset('/static/images/tool_thumb_003@2x.png') }}" alt="Card image cap">
+                        <div class="card-body p-0 pt-3">
+                            <h5 class="card-title m-0">Face your Fears</h5>
+                            <p class="card-text"><small class="text-muted">By MeetYourself</small></p>
+                            <p class="card-text">An easy-to-use tool that helps you identify and face your fears.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
