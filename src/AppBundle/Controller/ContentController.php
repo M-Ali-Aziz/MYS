@@ -2,12 +2,26 @@
 
 namespace AppBundle\Controller;
 
+use Pimcore\Controller\FrontendController;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Routing\Annotation\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 class ContentController extends BaseController
-{
-    public function StartAction(Request $request)
+{   
+    /**
+     * @Template
+     * @param Request $request
+     */
+    public function defaultAction(Request $request)
     {
-        $this->view->body_bg_img_class = 'body-bg-img';
+    }
+
+    /**
+     * @Template
+     * @param Request $request
+     */
+    public function startAction(Request $request)
+    {
     }
 }

@@ -1,0 +1,15 @@
+{# Bootstrap css #}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<h1>Tool preview:</h1>
+
+<div class="col-4 p-0 ml-2">
+    <a href="#" class="card text-dark text-left btn">
+        <img class="card-img-top" src="{{ image.path }}{{ image.filename }}" alt="Card image cap">
+        <div class="card-body p-0 pt-3">
+            <h5 class="card-title m-0">{{ tool.title }}</h5>
+            <p class="card-text"><small class="text-muted">By {{ tool.createdBy }}</small></p>
+            <p class="card-text">{{ tool.description }}</p>
+        </div>
+    </a>
+</div>

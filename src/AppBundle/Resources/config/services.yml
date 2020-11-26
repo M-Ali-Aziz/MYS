@@ -29,3 +29,9 @@ services:
         resource: '../../Command/*'
         tags: ['console.command']
         
+
+    # ---------------------------------------------------------
+    # Link Generators for DataObjects
+    # ---------------------------------------------------------
+    AppBundle\Website\LinkGenerator\ToolsLinkGenerator:
+        public: true
