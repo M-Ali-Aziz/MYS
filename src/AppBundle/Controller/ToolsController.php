@@ -16,7 +16,7 @@ class ToolsController extends BaseController
 {
     /**
      * @Template
-     * @Route("/en/tools", name="tolls_start")
+     * @Route("/tools", name="tolls_start")
      * @param Request $request
      */
     public function startAction(Request $request)
@@ -25,7 +25,7 @@ class ToolsController extends BaseController
 
     /**
      * @Template
-     * @Route("/en/preview/tool/{id}", name="tolls_preview")
+     * @Route("/preview/tool/{id}", name="tolls_preview")
      * @param Request $request
      */
     public function previewAction(Request $request, string $id)

@@ -21,6 +21,6 @@ class ToolsLinkGenerator implements LinkGeneratorInterface
             throw new \InvalidArgumentException('Given object is no tool');
         }
 
-        return '/en/preview/tool/' . $object->getId();
+        return '/preview/tool/' . $object->getId();
     }
 }

@@ -19,6 +19,7 @@ class ContentController extends BaseController
 
     /**
      * @Template
+     * @Route("/", name="homepage")
      * @param Request $request
      */
     public function startAction(Request $request)
