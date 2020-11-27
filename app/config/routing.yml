@@ -1,2 +1,9 @@
 _pimcore:
     resource: "@PimcoreCoreBundle/Resources/config/routing.yml"
+
+app_localized:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+    prefix:
+        en: /en
+        sv: /sv
