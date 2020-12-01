@@ -18,7 +18,7 @@ return [
         "preserveMetaData" => FALSE,
         "rasterizeSVG" => FALSE,
         "downloadable" => FALSE,
-        "modificationDate" => 1606223246,
+        "modificationDate" => 1606772751,
         "creationDate" => 1606223239,
         "forcePictureTag" => FALSE,
         "id" => "Default"

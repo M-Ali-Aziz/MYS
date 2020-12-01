@@ -1,0 +1,28 @@
+{# Hero banner #}
+<div class="row-fluid mb-5">
+    {% if editmode %}
+        <div class="mb-3">
+            <h5>Please add an image first to continue</h5>
+            {{ pimcore_image('heroImage', {'reload': true}) }}
+        </div>
+        {% if pimcore_image('heroImage').src %}
+            <div id="heroBanner" style="background-image:url({{ pimcore_image('heroImage').src }});">
+                <div class="col-8 px-0 py-4 ml-5 text-white">
+                    <h1 class="mb-3">{{ pimcore_input("heroTitle", {'placeholder': 'Hero Title ...'}) }}</h1>
+                    <H4 class="mb-3">{{ pimcore_input("heroText", {'placeholder': 'Hero Text ...'}) }}</H4>
+                    <div class="btn btn-primary rounded-pill"><i class="fas fa-play fa-sm"></i> {{ pimcore_link('heroLink', {'class': 'text-white', 'placeholder': 'Hero Link ...'}) }}</div>
+                </div>
+            </div>
+        {% endif %}
+    {% else %}
+        <div id="heroBanner" class="rounded" style="background-image:url({{ pimcore_image('heroImage').src }});">
+            <div class="col-8 px-0 py-4 ml-5 text-white">
+                <h1 class="mb-3">{{ pimcore_input("heroTitle").data }}</h1>
+                <H4 class="mb-3">{{ pimcore_input("heroText").data }}</H4>
+                {% if pimcore_link('heroLink').text %}
+                    <a class="btn btn-primary rounded-pill" href="{{ pimcore_link('heroLink').href }}" role="button"><i class="fas fa-play fa-sm"></i> {{ pimcore_link('heroLink').text }}</a>
+                {% endif %}
+            </div>
+        </div>
+    {% endif %}
+</div>
