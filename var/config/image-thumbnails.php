@@ -1,14 +1,20 @@
 <?php 
 
 return [
-    "Default" => [
+    "tools_card" => [
         "items" => [
-
+            [
+                "method" => "resize",
+                "arguments" => [
+                    "width" => 230,
+                    "height" => 163
+                ]
+            ]
         ],
         "medias" => [
 
         ],
-        "name" => "Default",
+        "name" => "tools_card",
         "description" => "",
         "group" => "",
         "format" => "SOURCE",
@@ -18,9 +24,9 @@ return [
         "preserveMetaData" => FALSE,
         "rasterizeSVG" => FALSE,
         "downloadable" => FALSE,
-        "modificationDate" => 1606772751,
-        "creationDate" => 1606223239,
+        "modificationDate" => 1607085927,
+        "creationDate" => 1607085916,
         "forcePictureTag" => FALSE,
-        "id" => "Default"
+        "id" => "tools_card"
     ]
 ];

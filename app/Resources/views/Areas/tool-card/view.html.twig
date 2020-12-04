@@ -1,0 +1,32 @@
+{# Tools Card #}
+<h4>{{ 'discover_tools' | trans }}</h4>
+<div class="row mb-4">
+    {% if tools %}
+        {% for tool in tools %}
+            <div class="col-4 p-0 mb-4">
+                <a href="#" class="card text-dark text-left btn h-100">
+                    {% if tool.image %}
+                        <img class="card-img-top" src="{{ tool.image.thumbnail('toolCard') }}" alt="{{ tool.image.filename }}">
+                    {% else %}
+                        <div style="height:163px;">
+                            <img class="w-100 h-100 rounded" src="{{ asset('/static/images/image-not-found.png') }}" alt="image card">
+                        </div>
+                    {% endif %}
+                    <p class="badge badge-light mt-3 ml-2 p-2 position-absolute">{{ tool.category | trans }}</p>
+                    <div class="card-body p-0 pt-3">
+                        <h5 class="card-title m-0">{{ tool.title }}</h5>
+                        {% if tool.creator %}
+                            <p class="card-text"><small class="text-muted">{{ 'by' | trans }} {{ tool.creator.name }}</small></p>
+                        {% else %}
+                            <p class="card-text"><small class="text-muted">{{ 'by' | trans }} {{ 'MeetYourself' }}</small></p>
+                        {% endif %}
+                        <p class="card-text">{{ tool.description }}</p>
+                    </div>
+                </a>
+            </div>
+
+        {% endfor %}
+    {% else %}
+        <h5>{{ 'no_tools_card_msg' | trans }}</h5>
+    {% endif %}
+</div>
