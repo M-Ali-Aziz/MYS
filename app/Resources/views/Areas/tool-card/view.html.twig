@@ -8,9 +8,7 @@
                     {% if tool.image %}
                         <img class="card-img-top" src="{{ tool.image.thumbnail('toolCard') }}" alt="{{ tool.image.filename }}">
                     {% else %}
-                        <div style="height:163px;">
-                            <img class="w-100 h-100 rounded" src="{{ asset('/static/images/image-not-found.png') }}" alt="image card">
-                        </div>
+                        <img height="163" class="rounded" src="{{ asset('/static/images/image-not-found.png') }}" alt="toll image">
                     {% endif %}
                     <p class="badge badge-light mt-3 ml-2 p-2 position-absolute">{{ tool.category | trans }}</p>
                     <div class="card-body p-0 pt-3">
